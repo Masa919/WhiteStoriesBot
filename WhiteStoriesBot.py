@@ -65,7 +65,7 @@ async def on_message(message):
         if player_info[1][player_index] == 0:
             player_info[2][player_index] = "Mad"
 
-        emb.set_field_at(player_index,name = player_info[0][player_index],value= "NG Role:" + str(num_reac_list[player_index]) +"\nHP:" + str(player_info[1][player_index]) + "\nStatus:Normal\n" + player_info[3][player_index])
+        emb.set_field_at(player_index,name = player_info[0][player_index],value= "NG Role:" + str(num_reac_list[player_index]) +"\nHP:" + str(player_info[1][player_index]) + "\nStatus:" + player_info[2][player_index] + "\n"　+ player_info[3][player_index])
         await msg_list[0].edit(embed=emb)
         await msg_list[1].edit(content = msg_list[1].content + reply + "→")
 
