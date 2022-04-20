@@ -76,6 +76,16 @@ async def on_message(message):
             await msg_list[1].edit(content = msg_list[1].content + reply + "→")
 
             await message.delete()
+    elif '.ws r' == message.content and mode_flg[0] :
+        await message.delete()
+        await msg_list[2].delete()
+        await msg_list[1].delete()
+
+        player_info[1] = [4]*6
+        player_info[2] = ["Normal"]*6
+        player_info[3] = ["S"]*6
+        player_info[4] = [[]]*6
+
     elif '.ws e' == message.content and mode_flg[0] :
         await message.delete()
         await msg_list[2].delete()
@@ -92,9 +102,6 @@ async def on_message(message):
         mode_flg.clear()
         msg_list.clear() 
         mode_flg.append(False)
-
-        
-        return #停止処理
     else:
         
         return
