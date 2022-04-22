@@ -38,7 +38,7 @@ async def on_message(message):
     elif ".ws n" == message.content and not mode_flg[0] :
         mode_flg[0] = True
         await message.delete()
-        embed = discord.Embed(title = "白物語", description = "百話目の怪談を語り終えたとき、私たちは霊障に見舞われるだろう。\n怪談を面白く「訂正」して、霊障を回避しよう", color=0xffffff)
+        embed = discord.Embed(title = "白物語", description = "百物語も残すところあと一話。\n完遂を阻止するために、最後の一話を面白くしてしまおう。", color=0xffffff)
         for i in range(6):
             embed.add_field(name="Unknown",value="NG Role:" + num_reac_list[i] +"\nHP:4\nStatus:Normal\nS→")
         embeded_msg = await ch.send(embed=embed)
